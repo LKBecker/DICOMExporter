@@ -41,14 +41,19 @@
 			this.checkBoxCopyAndRename = new System.Windows.Forms.CheckBox();
 			this.checkBoxCheckAndDeleteAfterCopy = new System.Windows.Forms.CheckBox();
 			this.panelProgressBar = new System.Windows.Forms.Panel();
+			this.label3 = new System.Windows.Forms.Label();
+			this.comboBoxCopyMode = new System.Windows.Forms.ComboBox();
+			this.labelExportMode = new System.Windows.Forms.Label();
+			this.comboBoxExportMode = new System.Windows.Forms.ComboBox();
 			this.labelProgressBar = new System.Windows.Forms.Label();
 			this.progressBarDICOMFiles = new System.Windows.Forms.ProgressBar();
+			this.checkBoxExportPerStudyCounts = new System.Windows.Forms.CheckBox();
 			this.panelProgressBar.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// buttonBrowseDICOMDirectory
 			// 
-			this.buttonBrowseDICOMDirectory.Location = new System.Drawing.Point(505, 10);
+			this.buttonBrowseDICOMDirectory.Location = new System.Drawing.Point(505, 8);
 			this.buttonBrowseDICOMDirectory.Name = "buttonBrowseDICOMDirectory";
 			this.buttonBrowseDICOMDirectory.Size = new System.Drawing.Size(75, 23);
 			this.buttonBrowseDICOMDirectory.TabIndex = 0;
@@ -58,7 +63,7 @@
 			// 
 			// buttonBrowseOutputDirectory
 			// 
-			this.buttonBrowseOutputDirectory.Location = new System.Drawing.Point(505, 41);
+			this.buttonBrowseOutputDirectory.Location = new System.Drawing.Point(505, 35);
 			this.buttonBrowseOutputDirectory.Name = "buttonBrowseOutputDirectory";
 			this.buttonBrowseOutputDirectory.Size = new System.Drawing.Size(75, 23);
 			this.buttonBrowseOutputDirectory.TabIndex = 1;
@@ -68,14 +73,14 @@
 			// 
 			// textBoxOutputDirectory
 			// 
-			this.textBoxOutputDirectory.Location = new System.Drawing.Point(99, 38);
+			this.textBoxOutputDirectory.Location = new System.Drawing.Point(99, 36);
 			this.textBoxOutputDirectory.Name = "textBoxOutputDirectory";
 			this.textBoxOutputDirectory.Size = new System.Drawing.Size(400, 20);
 			this.textBoxOutputDirectory.TabIndex = 2;
 			// 
 			// textBoxDICOMDirectory
 			// 
-			this.textBoxDICOMDirectory.Location = new System.Drawing.Point(99, 12);
+			this.textBoxDICOMDirectory.Location = new System.Drawing.Point(99, 9);
 			this.textBoxDICOMDirectory.Name = "textBoxDICOMDirectory";
 			this.textBoxDICOMDirectory.Size = new System.Drawing.Size(400, 20);
 			this.textBoxDICOMDirectory.TabIndex = 3;
@@ -83,7 +88,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(3, 15);
+			this.label1.Location = new System.Drawing.Point(3, 13);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(90, 13);
 			this.label1.TabIndex = 4;
@@ -92,7 +97,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(6, 41);
+			this.label2.Location = new System.Drawing.Point(3, 40);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(87, 13);
 			this.label2.TabIndex = 5;
@@ -100,7 +105,7 @@
 			// 
 			// buttonConvert
 			// 
-			this.buttonConvert.Location = new System.Drawing.Point(505, 73);
+			this.buttonConvert.Location = new System.Drawing.Point(505, 130);
 			this.buttonConvert.Name = "buttonConvert";
 			this.buttonConvert.Size = new System.Drawing.Size(75, 23);
 			this.buttonConvert.TabIndex = 6;
@@ -111,7 +116,7 @@
 			// checkBoxExtractMetadata
 			// 
 			this.checkBoxExtractMetadata.AutoSize = true;
-			this.checkBoxExtractMetadata.Location = new System.Drawing.Point(296, 87);
+			this.checkBoxExtractMetadata.Location = new System.Drawing.Point(281, 85);
 			this.checkBoxExtractMetadata.Name = "checkBoxExtractMetadata";
 			this.checkBoxExtractMetadata.Size = new System.Drawing.Size(201, 17);
 			this.checkBoxExtractMetadata.TabIndex = 7;
@@ -121,17 +126,17 @@
 			// checkBoxCreateMetadataTable
 			// 
 			this.checkBoxCreateMetadataTable.AutoSize = true;
-			this.checkBoxCreateMetadataTable.Location = new System.Drawing.Point(296, 64);
+			this.checkBoxCreateMetadataTable.Location = new System.Drawing.Point(281, 62);
 			this.checkBoxCreateMetadataTable.Name = "checkBoxCreateMetadataTable";
-			this.checkBoxCreateMetadataTable.Size = new System.Drawing.Size(159, 17);
+			this.checkBoxCreateMetadataTable.Size = new System.Drawing.Size(203, 17);
 			this.checkBoxCreateMetadataTable.TabIndex = 8;
-			this.checkBoxCreateMetadataTable.Text = "Export metadata table (slow)";
+			this.checkBoxCreateMetadataTable.Text = "Export summary metadata table (slow)";
 			this.checkBoxCreateMetadataTable.UseVisualStyleBackColor = true;
 			// 
 			// checkBoxCopyAndRename
 			// 
 			this.checkBoxCopyAndRename.AutoSize = true;
-			this.checkBoxCopyAndRename.Location = new System.Drawing.Point(99, 64);
+			this.checkBoxCopyAndRename.Location = new System.Drawing.Point(99, 62);
 			this.checkBoxCopyAndRename.Name = "checkBoxCopyAndRename";
 			this.checkBoxCopyAndRename.Size = new System.Drawing.Size(130, 17);
 			this.checkBoxCopyAndRename.TabIndex = 10;
@@ -143,7 +148,7 @@
 			// 
 			this.checkBoxCheckAndDeleteAfterCopy.AutoSize = true;
 			this.checkBoxCheckAndDeleteAfterCopy.Enabled = false;
-			this.checkBoxCheckAndDeleteAfterCopy.Location = new System.Drawing.Point(99, 87);
+			this.checkBoxCheckAndDeleteAfterCopy.Location = new System.Drawing.Point(99, 85);
 			this.checkBoxCheckAndDeleteAfterCopy.Name = "checkBoxCheckAndDeleteAfterCopy";
 			this.checkBoxCheckAndDeleteAfterCopy.Size = new System.Drawing.Size(174, 17);
 			this.checkBoxCheckAndDeleteAfterCopy.TabIndex = 9;
@@ -152,18 +157,73 @@
 			// 
 			// panelProgressBar
 			// 
+			this.panelProgressBar.Controls.Add(this.label2);
+			this.panelProgressBar.Controls.Add(this.label3);
+			this.panelProgressBar.Controls.Add(this.comboBoxCopyMode);
+			this.panelProgressBar.Controls.Add(this.buttonConvert);
+			this.panelProgressBar.Controls.Add(this.labelExportMode);
+			this.panelProgressBar.Controls.Add(this.checkBoxCopyAndRename);
+			this.panelProgressBar.Controls.Add(this.comboBoxExportMode);
+			this.panelProgressBar.Controls.Add(this.checkBoxCheckAndDeleteAfterCopy);
 			this.panelProgressBar.Controls.Add(this.labelProgressBar);
+			this.panelProgressBar.Controls.Add(this.checkBoxCreateMetadataTable);
 			this.panelProgressBar.Controls.Add(this.progressBarDICOMFiles);
+			this.panelProgressBar.Controls.Add(this.checkBoxExtractMetadata);
+			this.panelProgressBar.Controls.Add(this.checkBoxExportPerStudyCounts);
 			this.panelProgressBar.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panelProgressBar.Location = new System.Drawing.Point(0, 0);
 			this.panelProgressBar.Name = "panelProgressBar";
-			this.panelProgressBar.Size = new System.Drawing.Size(587, 105);
+			this.panelProgressBar.Size = new System.Drawing.Size(587, 160);
 			this.panelProgressBar.TabIndex = 11;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(62, 135);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(48, 13);
+			this.label3.TabIndex = 15;
+			this.label3.Text = "Process:";
+			// 
+			// comboBoxCopyMode
+			// 
+			this.comboBoxCopyMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxCopyMode.Items.AddRange(new object[] {
+            "Images and Videos",
+            "Images only",
+            "Videos only"});
+			this.comboBoxCopyMode.Location = new System.Drawing.Point(128, 132);
+			this.comboBoxCopyMode.MaxDropDownItems = 2;
+			this.comboBoxCopyMode.Name = "comboBoxCopyMode";
+			this.comboBoxCopyMode.Size = new System.Drawing.Size(135, 21);
+			this.comboBoxCopyMode.TabIndex = 14;
+			// 
+			// labelExportMode
+			// 
+			this.labelExportMode.AutoSize = true;
+			this.labelExportMode.Location = new System.Drawing.Point(278, 135);
+			this.labelExportMode.Name = "labelExportMode";
+			this.labelExportMode.Size = new System.Drawing.Size(60, 13);
+			this.labelExportMode.TabIndex = 13;
+			this.labelExportMode.Text = "Subfolders:";
+			// 
+			// comboBoxExportMode
+			// 
+			this.comboBoxExportMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxExportMode.Items.AddRange(new object[] {
+            "Per Study",
+            "Per Patient",
+            "None"});
+			this.comboBoxExportMode.Location = new System.Drawing.Point(344, 132);
+			this.comboBoxExportMode.MaxDropDownItems = 2;
+			this.comboBoxExportMode.Name = "comboBoxExportMode";
+			this.comboBoxExportMode.Size = new System.Drawing.Size(138, 21);
+			this.comboBoxExportMode.TabIndex = 2;
 			// 
 			// labelProgressBar
 			// 
 			this.labelProgressBar.AutoSize = true;
-			this.labelProgressBar.Location = new System.Drawing.Point(193, 71);
+			this.labelProgressBar.Location = new System.Drawing.Point(234, 100);
 			this.labelProgressBar.Name = "labelProgressBar";
 			this.labelProgressBar.Size = new System.Drawing.Size(137, 13);
 			this.labelProgressBar.TabIndex = 1;
@@ -172,23 +232,27 @@
 			// 
 			// progressBarDICOMFiles
 			// 
-			this.progressBarDICOMFiles.Location = new System.Drawing.Point(140, 41);
+			this.progressBarDICOMFiles.Location = new System.Drawing.Point(149, 67);
 			this.progressBarDICOMFiles.Name = "progressBarDICOMFiles";
 			this.progressBarDICOMFiles.Size = new System.Drawing.Size(307, 23);
 			this.progressBarDICOMFiles.TabIndex = 0;
 			this.progressBarDICOMFiles.Visible = false;
 			// 
+			// checkBoxExportPerStudyCounts
+			// 
+			this.checkBoxExportPerStudyCounts.AutoSize = true;
+			this.checkBoxExportPerStudyCounts.Location = new System.Drawing.Point(281, 108);
+			this.checkBoxExportPerStudyCounts.Name = "checkBoxExportPerStudyCounts";
+			this.checkBoxExportPerStudyCounts.Size = new System.Drawing.Size(218, 17);
+			this.checkBoxExportPerStudyCounts.TabIndex = 12;
+			this.checkBoxExportPerStudyCounts.Text = "Export per-study image and video counts";
+			this.checkBoxExportPerStudyCounts.UseVisualStyleBackColor = true;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(587, 105);
-			this.Controls.Add(this.checkBoxCopyAndRename);
-			this.Controls.Add(this.checkBoxCheckAndDeleteAfterCopy);
-			this.Controls.Add(this.checkBoxCreateMetadataTable);
-			this.Controls.Add(this.checkBoxExtractMetadata);
-			this.Controls.Add(this.buttonConvert);
-			this.Controls.Add(this.label2);
+			this.ClientSize = new System.Drawing.Size(587, 160);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.textBoxDICOMDirectory);
 			this.Controls.Add(this.textBoxOutputDirectory);
@@ -224,6 +288,11 @@
 		private System.Windows.Forms.Panel panelProgressBar;
 		private System.Windows.Forms.ProgressBar progressBarDICOMFiles;
 		private System.Windows.Forms.Label labelProgressBar;
-    }
+		private System.Windows.Forms.CheckBox checkBoxExportPerStudyCounts;
+		private System.Windows.Forms.ComboBox comboBoxExportMode;
+		private System.Windows.Forms.Label labelExportMode;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.ComboBox comboBoxCopyMode;
+	}
 }
 

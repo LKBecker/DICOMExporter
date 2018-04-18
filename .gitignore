@@ -1,0 +1,12 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+/bin
+/Documentation
+/obj
+/reducedset.txt
+/ElementArrayTagsBackup.txt
+/DICOMExporter.rar
+/AllDicomTags.txt
+/.vs/DICOMExporter/v15/Server/sqlite3
